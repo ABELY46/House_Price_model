@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            gap: 15px;
+            font-size: 20px;
+            font-family: 600;
+            border-radius: 20px;
+            box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+        
+        .cont1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background: goldenrod;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 6px rgba(42, 169, 3, 0.5);
+        }
+        span {
+            color: red;
+            background: white;
+            padding: 4px;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+        
+        .cont2 {
+            background: darkcyan;
+            padding:30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 12px 2px rgba(239, 213, 19, 0.7);
+        }
+        form {
+            
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 12px 6px rgba(0 , 0, 0, 0.2);
+        }
+        
+        #region {
+            padding: 7px;
+        }
+        
+        #bedrooms {
+            padding: 7px;
+        }
+        
+        #house_type {
+            padding: 7px;
+        }
+        
+        #year_built {
+            padding: 7px;
+        }
+        
+        label {
+            color: darkgreen;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        button {
+            cursor: pointer;
+            color: white;
+            background: goldenrod;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 20px;
+        }
+        
+        button:hover {
+            background: green;
+            color: red;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: brown;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <h1>Predict House Price</h1>
+    <h2>Enter Numeric Value instead of String Value</h2>
+    <div class="container">
+        <div class="cont1">
+            <p>Arusha :<span>0</span></P>
+            <p>Dar es Salaam:<span>1</span></P>
+            <p>Dodoma:<span>2</span></P>
+            <p>Iringa:<span>3</span></P>
+            <p>Kilimanjaro:<span>4</span></P>
+            <p>Mbeya:<span>5</span></P>
+            <p>Morogoro:<span>6</span></P>
+            <p>Mwanza:<span>7</span></P>
+            <p>Ruvuma:<span>8</span></P>
+            <p>Tanga:<span>9</span></P>
+        </div>
+
+        <div class="cont2">
+            <p>Apartment:<span>0</span></P>
+            <p>Bungalow:<span>1</span></P>
+            <p>Cottage:<span>2</span></P>
+            <p>Townhouse:<span>3</span></P>
+            <p>villa:<span>4</span></P>
+        </div>
+    </div>
+    
+    
+    <form action="/predict" method="POST">
+        <label for="region">Region:</label>
+        <input type="text" id="region" name="region" required>
+        <br><br>
+        
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" id="bedrooms" name="bedrooms" required>
+        <br><br>
+        
+        <label for="house_type">House Type:</label>
+        <input type="text" id="house_type" name="house_type" required>
+        <br><br>
+        
+        <label for="year_built">Year Built:</label>
+        <input type="number" id="year_built" name="year_built" required>
+        <br><br>
+        
+        <button type="submit">Predict Price</button>
+    </form>
+</body>
+</html>
